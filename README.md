@@ -50,7 +50,7 @@ This project demonstrates frontend development, Docker containerization, and env
 ## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dockerized-react-vite-app.git
+git clone https://github.com/Lahiru-Avishka/Docker-frontend-project.git
 
 cd dockerized-react-vite-app
 ```
