@@ -1,16 +1,179 @@
-# React + Vite
+# Dockerized React Vite Application 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React frontend application built with **Vite** and containerized using **Docker**.
 
-Currently, two official plugins are available:
+This project demonstrates frontend development, Docker containerization, and environment configuration for deployment-ready applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Hot Module Replacement (HMR)
+- Dockerized Development Environment
+- Environment Variable Support
+- Responsive UI
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Technologies
+
+- React
+- Vite
+- Docker
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+---
+
+## Project Structure
+
+```text
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── App.css
+├── Dockerfile
+├── package.json
+├── vite.config.js
+├── README.md
+└── .dockerignore
+```
+
+---
+
+## Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/dockerized-react-vite-app.git
+
+cd dockerized-react-vite-app
+```
+
+---
+
+## Run Without Docker
+
+Install packages
+
+```bash
+npm install
+```
+
+Start development server
+
+```bash
+npm run dev
+```
+
+Open
+
+```
+http://localhost:5173
+```
+
+---
+
+## Run Using Docker
+
+Build Image
+
+```bash
+docker build -t react-app .
+```
+
+Run Container
+
+```bash
+docker run \
+--name react-container \
+-p 3000:5173 \
+-v /app/node_modules \
+-v ${PWD}:/app \
+-e CHOKIDAR_USEPOLLING=true \
+react-app
+```
+
+Open
+
+```
+http://localhost:3000
+```
+
+---
+
+## Docker Commands
+
+Build
+
+```bash
+docker build -t react-app .
+```
+
+List Images
+
+```bash
+docker images
+```
+
+Run
+
+```bash
+docker run -p 3000:5173 react-app
+```
+
+Stop
+
+```bash
+docker stop react-container
+```
+
+Remove
+
+```bash
+docker rm react-container
+```
+
+---
+
+## Learning Outcomes
+
+- Docker fundamentals
+- Building Docker images
+- Running containers
+- Port mapping
+- Volume mounting
+- Environment variables
+- React development inside Docker
+
+---
+
+## Future Improvements
+
+- Docker Compose
+- Nginx Production Build
+- GitHub Actions CI/CD
+- Deploy to AWS EC2
+- Deploy to ECS
+- Kubernetes Deployment
+
+---
+
+## Author
+
+**Lahiru Avishka Madhusanka**
+
+DevOps & Cloud Computing Enthusiast
+
+- Docker
+- Kubernetes
+- AWS
+- Linux
+- CI/CD
+
+⭐ Feel free to fork and star this repository.
